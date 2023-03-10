@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>update</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'update_style.css' %}">
+</head>
+
+<body>
+    {% block content %}
+    <!--UPDATE BUTTON -->
+    <div class="up-popup" id="upform">
+        <form action="/update/{{data.id}}" method="POST" autocomplete="off">
+            {% csrf_token %}
+            <table class="tablepop">
+                <tr class="trp">
+                    <td class="tdp"><label for="fname">FirstName</label></td>
+                    <td class="tdp"><input name="fname" type="text" value="{{data.Firstname}}"></td>
+                </tr>
+                <tr class="trp">
+                    <td class="tdp"><label for="lname">LastName</label></td>
+                    <td class="tdp"><input name="lname" type="text" value="{{data.Lastname}}"></td>
+                </tr>
+                <tr class="trp">
+                    <td class="tdp"><label for="email">Emailid</label></td>
+                    <td class="tdp"><input name="email" type="text" value="{{data.Email}}"></td>
+                </tr>
+                <tr class="trp">
+                    <td class="tdp"><input class="buttonup" type="submit" value="Update"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    {% endblock%}
+</body>
+
+</html>

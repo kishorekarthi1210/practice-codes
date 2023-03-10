@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    color: white;
+    padding: 0.5%;
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(32, 28, 42);
+    width: 100%;
+}
+
+.section {
+    height: 45px;
+    border-radius: 4px;
+    margin-top: 1%;
+    margin-left: 30%;
+    width: 40%;
+    height: 60%;
+    background-color: white;
+}
+
+.tabler {
+    border: hidden;
+    align-items: left;
+    margin-top: -40px;
+    margin-left: 15%;
+    width: 70%;
+    height: 60%;
+    background-color: white;
+}
+
+.trr,
+.tdr {
+    border: hidden;
+}
+
+.trr:nth-child(even) {
+    background-color: white;
+    border: hidden;
+}
+
+label {
+    margin-left: -20px;
+    padding: 2%;
+    box-align: left;
+    border-color: black;
+}
+
+.buttonr {
+    color: white;
+    background-color: rgb(56, 49, 49);
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px 10px;
+    border-color: rgb(56, 49, 49);
+    margin-left: 300%;
+}

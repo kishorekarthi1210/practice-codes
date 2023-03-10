@@ -1,0 +1,43 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <header class="header">
+        <h1>Employee management system</h1>
+    </header>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'emp_style.css'%}">
+</head>
+
+<body>
+    {% block content %}
+    <h2 class="h2">Employees List</h2>
+    <!--add employee button-->
+    <form action="registration">
+        <input type="submit" class="buttontop" value="Add Employee">
+    </form>
+    <!--employee details table-->
+    <table>
+        <tr>
+            <th style="width:20%;">Employee FirstName</th>
+            <th style="width:20%;">Employee LastName</th>
+            <th style="width:20%;">Employee Emailid</th>
+            <th style="width:40%;">Actions</th>
+        </tr>
+        {% for dat in data %}
+        <tr>
+            <td>{{ dat.Firstname }}</td>
+            <td>{{ dat.Lastname }}</td>
+            <td>{{ dat.Email }}</td>
+            <td>
+                <a href="update/{{dat.id}}"><input class="button" type="submit" value="Update"></a>
+                <a href="delete/{{dat.id}}"><input class="button1" type="submit" value="Delete"></a>
+                <a href="view/{{dat.id}}"><input class="button" type="submit" value="View"></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+</body>
+
+</html>

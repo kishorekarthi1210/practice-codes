@@ -1,0 +1,51 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <title>registration</title>
+    <header class="header">
+        <h1 style="text-align:center;">Registration</h1>
+    </header>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reg_style.css' %}">
+</head>
+
+<body style="background: linear-gradient(to bottom right, rgb(54, 51, 78) , rgb(166, 162, 184));">
+    {% block content %}
+    <div class="section">
+        <form action="" method="POST" autocomplete="off">
+            {% csrf_token %}
+            <table class="tabler">
+                <tr class="trr">
+                    <td class="tdr"><label class="label" for="fname">FirstName</label></td>
+                    <td class="tdr"><input type="text" class="text" name="fname" id="fname"></td><br>
+                </tr>
+                <tr class="trr">
+                    <td class="tdr"><label class="label" for="lname">LastName</label></td>
+                    <td class="tdr"><input type="text" class="text" name="lname" id="lname"></td><br>
+                </tr>
+                <tr class="trr">
+                    <td class="tdr"><label class="label" for="email">Emailid</label></td>
+                    <td class="tdr"><input type="text" class="text" name="email" id="email"></td><br>
+                </tr>
+                <tr class="trr">
+                    <td class="tdr"><label class="label" for="passwd">Password</label></td>
+                    <td class="tdr"><input type="text" class="text" name="passwd" id="passwd"></td><br>
+                </tr>
+                <tr class="trr">
+                    <td class="tdr"><label class="label" for="cpasswd">Confirm Password</label></td>
+                    <td class="tdr"><input type="text" class="text" name="cpasswd" id="cpasswd"></td><br>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="tdr" style="margin-left: 10%; text-align: center;"><input type="submit" class="buttonr"
+                            value="Register"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    {% endblock%}
+</body>
+
+</html>

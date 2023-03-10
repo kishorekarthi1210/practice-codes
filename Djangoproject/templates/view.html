@@ -1,0 +1,39 @@
+<!DOCTYPE html5>
+<html>
+
+<body>
+    {% block content %}
+
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'update_style.css' %}">
+    </head>
+    <!--VIEW BUTTON -->
+    <div class="up-popup" id="Viform">
+        <form action="{% url 'index' %}">
+            <table class="tablepop">
+                <tr class="trp">
+                    <td class="tdp"><label for="fname">FirstName</label></td>
+                    <td class="tdp"><label for="fnamein">{{data.Firstname}}</label></td>
+                </tr>
+                <tr class="trp">
+                    <td class="tdp"><label for="lname">LastName</label></td>
+                    <td class="tdp"><label for="lnamein">{{data.Lastname}}</label></td>
+                </tr>
+                <tr class="trp">
+                    <td class="tdp"><label for="email">Emailid</label></td>
+                    <td class="tdp"><label for="emailin">{{data.Email}}</label></td>
+                </tr>
+                <tr class="trp">
+                    <form action="{% url 'index' %}">
+                        <td class="tdp"><a href="{% url 'index' %}"><input class="buttonup" type="submit"
+                                    value="OK"></a></td>
+                    </form>
+                </tr>
+            </table>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+
+</html>
